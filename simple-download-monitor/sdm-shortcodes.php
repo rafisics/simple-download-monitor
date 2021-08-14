@@ -181,9 +181,9 @@ function sdm_create_counter_shortcode( $atts ) {
 	$db_count = sdm_get_download_count_for_post( $id );
 
 	// Set string for singular/plural results
-	$string = ( $db_count == '1' ) ? __( 'Download', 'simple-download-monitor' ) : __( 'Downloads', 'simple-download-monitor' );
+	$string = ( $db_count == '1' ) ? __( 'মোট ডাউনলোড সংখ্যা: ', 'simple-download-monitor' ) : __( 'মোট ডাউনলোড সংখ্যা: ', 'simple-download-monitor' );
 
-	$output = '<div class="sdm_download_count"><span class="sdm_count_number">' . $db_count . '</span><span class="sdm_count_string"> ' . $string . '</span></div>';
+	$output = '<div class="sdm_download_count"><span class="sdm_count_string"> ' . $string . '</span><span class="sdm_count_number">' . $db_count . '</span></div>';
 	// Return result
 	return apply_filters( 'sdm_download_count_output', $output, $atts );
 }
