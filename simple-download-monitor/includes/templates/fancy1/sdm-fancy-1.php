@@ -137,8 +137,8 @@ function sdm_generate_fancy1_display_output( $args ) {
     }
 
     $db_count		 = sdm_get_download_count_for_post( $id );
-    $string			 = ($db_count == '1') ? __( 'Download', 'simple-download-monitor' ) : __( 'Downloads', 'simple-download-monitor' );
-    $download_count_string	 = '<span class="sdm_item_count_number">' . $db_count . '</span><span class="sdm_item_count_string"> ' . $string . '</span>';
+    $string			 = ($db_count == '1') ? __( 'মোট ডাউনলোড সংখ্যা: ', 'simple-download-monitor' ) : __( 'মোট ডাউনলোড সংখ্যা: ', 'simple-download-monitor' );
+    $download_count_string	 = '<span class="sdm_item_count_string"> ' . $string . '</span><span class="sdm_item_count_number">' . $db_count . '</span>';
 
     $output = '';
 
